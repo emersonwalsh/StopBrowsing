@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StopBrowsing</title>
+  <!-- Style -->
+  <link rel="stylesheet" href="resources/main.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="resources/introjs.css" />
+  <link rel='shortcut icon' type='image/x-icon' href='resources/img/favicon.ico' />
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+  <!-- JavaScript -->
+  <script src="resources/angular.min.js"></script>
+  <script src="resources/echarts.min.js"></script>
+  <script src="resources/intro.js"></script>
+</head>
+
+<body ng-app="myApp">
+  <div ng-controller="stopBrowsingController">
+
+      <!-- Top Bar -->
+      <div class="logo"
+        data-step="1" 
+        data-intro="Stop wasting endless time browsing for the right movie to watch.">
+       <img src="resources/img/logo.svg" 
+            alt="StopBrowsing Logo">
+       <div class="logo__text"
+            title="Click on me for a tour!"
+            ng-click="stopBrowsing.startTour();">
+          StopBrowsing
+       </div>
+    </div>
+
+    <!-- Y-Axis -->
+    <!-- <div class="yAxis-container">
+      <div class="yAxis-container__items"
+        data-step="2"
+        data-intro="Select a metric for the y-axis.">
+        <div class="yAxis-container__items__item"
+          ng-style="{'background-color': kpi.name === stopBrowsing.selectedKPI.y ? '#1a73e82c' : 'transparent'}"
+          ng-repeat="kpi in stopBrowsing.kpis"
+          ng-click="stopBrowsing.selectProvider(kpi.name);">
+          <img ng-src="{{kpi.img}}"
+            alt="{{kpi.name}} logo">
+        </div>
+      </div>
+    </div> -->
+
+    <!-- X-Axis -->
+    <!-- <div class="xAxis-container"
+        data-step="3"
+        data-intro="Select a metric for the x-axis.">
+        <div class="xAxis-container__item"
+          ng-style="{'background-color': kpi.name === stopBrowsing.selectedKPI.x ? '#1a73e82c' : 'transparent'}"
+          ng-repeat="kpi in stopBrowsing.kpis"
+          ng-click="stopBrowsing.selectProvider(kpi.name);">
+          <img ng-src="{{kpi.img}}"
+            alt="{{kpi.name}} logo">
+        </div>
+    </div> -->
+
+    <!-- Genres -->
+    <div class="genre-container">
+      <div class="genre-container__items"
+        data-step="4"
+        data-intro="Select a streaming platform.">
+        <div class="genre-container__items__item"
+          ng-style="{'background-color': provider.name === stopBrowsing.selectedProvider ? '#1a73e82c' : 'transparent'}"
+          ng-repeat="provider in stopBrowsing.providers"
+          ng-click="stopBrowsing.selectProvider(provider.name);">
+          <img ng-src="{{provider.img}}"
+            alt="{{provider.name}} logo">
+        </div>
+      </div>
+    </div>
+
+    <!-- Platforms -->
+    <!-- <div class="provider-container"
+      data-step="2"
+      data-intro="Select a streaming providers.">
+        <div class="provider-container__item"
+          ng-style="{'background-color': provider.name === stopBrowsing.selectedProvider? '#1a73e82c' : 'transparent'}"
+          ng-repeat="provider in stopBrowsing.providers"
+          ng-click="stopBrowsing.selectProvider(provider.name);">
+          <img ng-src="{{provider.img}}"
+            alt="{{provider.name}} logo">
+        </div>
+      </div> -->
+    
+
+    <!-- X-Axis Side Bar (RT Audience, RT Critics, IMBD, Movie Budget, etc.)
+
+    Y-Axis Bottom Bar (RT Audience, RT Critics, IMBD, Movie Budget, etc.)
+
+    Provider Top Bar (Netflix, Amazon, Hulu, HBO)
+
+    Genre Right Side Bar -->
+
+
+
+
+    <!-- Chart -->
+    <div id="chart" 
+      class="chart"
+      data-step="5" 
+      data-intro="Here are all of the available movies you can watch. Click on one to watch!">
+    </div>
+
+    <!-- Genre Filter -->
+
+    <!-- Footer -->
+
+    <script src="chart.js"></script>
+  </div>
+</body>
+</html>

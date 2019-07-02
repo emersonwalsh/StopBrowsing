@@ -1,0 +1,187 @@
+/* TODO 
+add provider selection 
+add genre filter (facet) */
+
+@font-face {
+  font-family: Futura;
+  src: local('Futura Std');
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.logo__text {
+  font-family: Futura;
+  float: left;
+  font-size: 20px;
+  line-height: 50px;
+  padding-left: 10px;
+  color: #1a73e8;
+  cursor: pointer;
+}
+
+.logo__text:hover {
+  color: #5196f0;
+}
+
+.logo img {
+  float: left;
+  height: 24px;
+  top: 0;
+  padding: 13px 0 0 10px;
+}
+
+/* Y-Axis */
+.yAxis-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yAxis-container__items {
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  display: block;
+}
+
+.yAxis-container__items__item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+}
+
+.yAxis-container__items__item:hover {
+  background-color: #1a73e82c
+}
+
+.yAxis-container__items__item img {
+  width: 80%;
+  margin: auto 0;
+}
+
+/* X-Axis */
+.xAxis-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+
+}
+
+.xAxis-container__item {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 15px 15px 0 0;
+}
+
+.xAxis-container__item:hover {
+  background-color: #1a73e82c
+}
+
+.xAxis-container__item img {
+  width: 80%;
+  padding: 20px 0 0 0;
+}
+
+/* Genres */
+.genre-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genre-container__items {
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  display: block;
+}
+
+.genre-container__items__item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 15px 0 0 15px;
+}
+
+.genre-container__items__item:hover {
+  background-color: #1a73e82c
+}
+
+.genre-container__items__item img {
+  width: 80%;
+  margin: auto 0;
+}
+
+/* Provider */
+.provider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+
+}
+
+.provider-container__item {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 0 0 15px 15px;
+}
+
+.provider-container__item:hover {
+  background-color: #1a73e82c
+}
+
+.provider-container__item img {
+  width: 80%;
+  padding: 20px 0 0 0;
+}
+
+/* Scatter */
+.chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
+}
